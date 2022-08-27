@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  
+}
+.container{
+  background-image: url('/photos/the-tonik-5Lbyao5bzbc-unsplash\ \(1\).jpg');
+  background-size:cover;
+  width: 100%;
+  height: 744.4px;
+}
+.logo1{
+  width: 60px;
+  margin-left:76rem;
+  margin-top: 3rem;
+}
+.logo-name{
+  color: rgb(207, 1, 94);
+  margin-left: 81rem;
+  margin-top: -4.7rem;
+  font-weight: 650;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.9rem;
+}
+li{
+  width: 40px;
+  display: block;
+  list-style: none;
+  float: left;
+  position:relative;
+  margin: 12px 20px;
+}
+ul{
+  margin-left: 73rem;
+}
+.insta1{
+  height: 43px;
+}
+li:hover{
+  transform: scale(1.2);
+
+}
+
+
+
+.form1{
+ margin-top: -491px;
+  margin-left: 31rem;
+}
+
+.formspace{
+  border: solid;
+  background-color: white;
+  margin-left: 30rem;
+  margin-top: -4rem;
+  border-radius: 7rem;
+  height: 36.5rem;
+  width: 35%;
+}
+label{
+ 
+  margin-left: 3rem;
+  font-size: 20px;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input{
+  margin-top: 10px;
+   margin-left: 45px;
+   height: 40px;
+   width: 40%;
+   border-radius: 5rem;
+   border-color: rgb(6, 202, 19);
+}
+.bt-login{
+  margin-left: 34rem;
+  width: 27%;
+  height: 2.8rem;
+  margin-top: 2rem;
+  background-color: black;
+  color:white;
+  font-size: 23px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4rem;
+}
+.bt-login:hover{
+  background-color: green;
+  
+}
+.bt-lg{
+  text-decoration: none;
+  color: white;
+}
+.bt-login:hover{
+  transform: scale(1.1);
+}
+
+.logo2{
+  width: 70px;
+  height: 66px;
+ margin-left: 44.7rem;
+ margin-top: 14px;
+  
+}
+.lastpara{
+  margin-left: 38.5rem;
+  font-size: 20px;
+  margin-top:18px;
+  font-weight: 600;
+  
+}
+.signup{
+  text-decoration: none;
+}
+.footer{
+  margin-top: 110px;
+  display: flex;
+  margin-left: 427px;
+ 
+}
+a{
+  text-decoration: none;
+  
+}
+.first{
+ height: 30px;
+ 
+}
+.firstp{
+  margin-top: -34px;
+  margin-left: 39px;
+  color: black;
+  font-size: 26px;
+  color: #111;
+  
+  font-weight: 900;
+  font-weight: bolder;
+}
+.firstp:hover{
+  color: rgb(76, 79, 241);
+}
+.second{
+  height: 30px;
+  margin-left:90px;
+  
+}
+.secondp{
+  margin-top: -32px;
+  margin-left: 158px;
+  color: black;
+  font-size: 26px;
+  color: #111;
+  
+  font-weight: 900;
+  font-weight: bolder;
+}
+.secondp:hover{
+  color: rgb(76, 79, 241);
+}
+.third{
+  height: 30px;
+  margin-left:100px;
+  
+}
+.thirdp{
+  margin-top: -34px;
+  margin-left: 138px;
+  color: black;
+  font-size: 26px;
+  color: #111;
+  
+  font-weight: 900;
+  font-weight: bolder;
+}
+.thirdp:hover{
+  color: rgb(76, 79, 241);
+}

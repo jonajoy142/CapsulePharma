@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CAPSULE PHARMA</title>
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="asset/css/adminlte.min.css">
+      <link rel="icon" type="image/x-icon" href="/Pharmacy-Stocks-Management/asset/img/logo1.png">
+   </head>
+   <body class="hold-transition login-page" style="background-image: url('./asset/img/352671-4k-wallpaper.jpg');background-size:cover">
+      
+      <div class="login-box">
+         <!-- /.login-logo -->
+         <div class="card card-outline card" style="border-radius: 15px;background-color: #131313; opacity: .9;">
+            <div class="card-header text-center" style="background-color: #131313;border-radius:15px ;">
+               <a href="index.html" class="brand-link">
+               <img src="asset/img/logo1.png" alt="DSMS Logo" width="200">
+              
+               </a>
+               <span style="font-size:2rem;font-weight:800;color:white ;">CAPUSLE PHARMA</span>
+            </div>
+            <div class="card-body" >
+               <form action="/login" method="post">
+                  <div class="input-group mb-3">
+                     <input type="email" name="email" style="background-color: rgb(196, 216, 230);" class="form-control" placeholder="Username">
+                     <div class="input-group-append">
+                        <div style="background-color: rgb(196, 216, 230);" class="input-group-text">
+                           <span  class="fas fa-user"></span>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                     <input type="password"  name="password" style="background-color: rgb(196, 216, 230);" class="form-control" placeholder="Password">
+                     <div class="input-group-append">
+                        <div style="background-color: rgb(196, 216, 230);" class="input-group-text">
+                           <span class="fas fa-lock"></span>
+                        </div>
+                     </div>
+                  </div>
+                  <p  style="color: rgb(245, 54, 54);font-style: italic;margin-left: 6rem;"><%=error%></p>
+                  
+                  <div class="row">
+                    
+                     <div class="col-6 offset-3">
+                        <a href="/login" ><button type="submit" class="btn btn-block btn-bg" style="background-color: #1B53E4; color: white; font-weight: 500;">Login</button></a>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <!-- /.card-body -->
+         </div>
+         <!-- /.card -->
+      </div>
+      <!-- /.login-box -->
+   </body>
+</html>

@@ -1,0 +1,138 @@
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/print.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>
+        <%= title %>
+    </title>
+</head>
+<div class="container">
+    <div class="col-md-12">
+        <div class="invoice">
+            <!-- begin invoice-company -->
+            <div class="invoice-company text-inverse f-w-600" align="center">
+                
+                Capsule Pharma
+            </div>
+            <!-- end invoice-company -->
+            <!-- begin invoice-header -->
+            <div class="invoice-header">
+                <div class="invoice-from">
+                    <small></small>
+                    <address class="m-t-5 m-b-5">
+                        <strong class="text-inverse">Capsule Pharma</strong><br>
+                        Kalamassery<br>
+                        Kochi,656656<br>
+                        Phone: (123) 456-7890<br>
+                        Fax: (123) 456-7890
+                    </address>
+                </div>
+               
+                <div class="invoice-date">
+                    <small style="font-size:medium ;">Invoice </small>
+                    <div class="date text-inverse m-t-5" id="date" onmouseenter="date()">August 3</div>
+                    <div class="invoice-detail">
+                       Bill No: <%=billId%><br>
+                    
+                    </div>
+                </div>
+            </div>
+            <!-- end invoice-header -->
+            <!-- begin invoice-content -->
+
+            
+                <div class="body-center">
+                    <!-- begin table-responsive -->
+                    <div class="table-responsive">
+                        <table class="table table-BORDER">
+                            <thead>
+                                <tr>
+                                    <th align="left" style="padding-left: 25px;">MED NAME</th>
+                                    <th class="text-center" width="12%">RATE</th>
+                                    <th class="text-center" width="25%">QUANTITY</th>
+                                    <th class="text-right" width="20%">LINE TOTAL</th>
+                                </tr>
+                            </thead>
+                            <% if(sampleData.length> 0)
+                            {
+            
+                            sampleData.forEach(function(data){
+                            %>
+
+
+                            <tbody>
+                                <tr>
+                                    <td style="padding-left: 30px;">
+                                        <%= data.medicine_name%>
+                                    </td>
+                                    <td  style="padding-left: 20px;"> <%= data.price %></td>
+                                    <td class="text-center" style="padding-left: 50px;"> <%= data.quantity %></td>
+                                    <td class="text-center" style="padding-left: 40px;"><%= data.quantity* data.price %></td>
+                                </tr>
+
+                            </tbody>
+
+
+                            <% }); } else { %>
+                                <tr>
+                                    <td colspan="5">No Data Found</td>
+                                </tr>
+                                <% } %>
+                        </table>
+                    </div>
+
+                    <!-- end table-responsive -->
+                    <!-- begin invoice-price -->
+                    <div class="invoice-price">
+                        <div class="invoice-price-left">
+                         
+                        </div>
+                        <div class="invoice-price-right">
+                            <small style="font-size:20px ;" >TOTAL</small> <span class="f-w-600">Rs.<%=gtotal%></span>
+                        </div>
+                    </div>
+                    <!-- end invoice-price -->
+                </div>
+                <!-- end invoice-content -->
+                <!-- begin invoice-note -->
+                <div class="invoice-note">
+                    * Make all cheques payable to [Your Company Name]<br>
+                    * Payment is due within 30 days<br>
+                    * If you have any questions concerning this invoice, contact [Capsule Pharma, 04856-2435666, capsulepharmakochi@gmail.com]
+                </div>
+                <!-- end invoice-note -->
+                <!-- begin invoice-footer -->
+                <div class="invoice-footer">
+                    <p class="text-center m-b-5 f-w-600">
+                        THANK YOU FOR YOUR BUSINESS
+                    </p>
+                    <p class="text-center">
+                        <span class="m-r-10"><i class="fa fa-fw fa-lg fa-globe"></i> matiasgallipoli.com</span>
+                        <span class="m-r-10"><i class="fa fa-fw fa-lg fa-phone-volume"></i> T:04856-2435666</span>
+                        <span class="m-r-10"><i class="fa fa-fw fa-lg fa-envelope"></i> capsulepharmakochi@gmail.com]</span>
+                    </p>
+                </div>
+                <!-- end invoice-footer -->
+        </div>
+        <div class="invoice-company text-inverse f-w-600">
+            <span class="pull-right hidden-print">
+                
+                <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i
+                        class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function date()
+    {
+    let date = new Date()
+    let day = date.getDate();
+    let month = date.getMonth()+1;
+    let year = date.getFullYear();
+    let fullDate = `${day}/${month}/${year}.`;
+    document.getElementById("date").innerHTML=fullDate;
+    }
+</script>

@@ -1,0 +1,25 @@
+.nav-link:hover{
+ background-color: rgb(29, 24, 24);
+}
+.info-box:hover{
+    transform: scale(1.04);
+
+}
+.info-box{
+    cursor:default;
+}
+.card{
+    
+    display: flex;
+}
+.card-text{
+    align-content:center;
+}
+.capsule:hover{
+    transform: scale(0.9);
+}
+.card:hover{
+    
+    transform: scale(1.02);
+    cursor:default;
+}

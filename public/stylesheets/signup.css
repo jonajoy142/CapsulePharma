@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+}
+.container{
+  background-image: url('/photos/the-tonik-5Lbyao5bzbc-unsplash\ \(1\).jpg');
+  background-size:cover;
+  width: 100%;
+  height: 744.4px;
+}
+.logo1{
+  width: 60px;
+  margin-left:76rem;
+  margin-top: 3rem;
+}
+.logo-name{
+  color: rgb(207, 1, 94);
+  margin-left: 81rem;
+  margin-top: -4.7rem;
+  font-weight: 650;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.9rem;
+}
+li{
+  width: 40px;
+  display: block;
+  list-style: none;
+  float: left;
+  position:relative;
+  margin: 12px 20px;
+}
+ul{
+  margin-left: 73rem;
+}
+.insta1{
+  height: 43px;
+}
+li:hover{
+  transform: scale(1.2);
+
+}
+
+::placeholder { 
+  color: rgb(98, 98, 116);
+  font-size: 14px;
+  opacity: 10;
+  padding: 5px; 
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+label{
+  margin-left: 70px;
+  
+  font-size: 20px;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input{
+  margin-left: 70px;
+  border: solid 2.2px;
+   height: 30px;
+   width: 70%;
+  
+   border-radius: 4rem;
+   border-color: rgb(175, 109, 235);
+}
+.lastpara{
+  margin-left:7rem;
+  font-size: 18px;
+  width: 100%;
+  margin-top:10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  
+}
+button{
+  margin-left: 70px;
+  
+}
+.sign{
+  text-decoration: none;
+  font-weight: 800;
+  color: white;
+}
+button{
+  width: 71%;
+  background-color: black;
+  
+  height: 2.4rem;
+  margin-top: -5px;
+  background-color: black;
+  color:white;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4rem;
+}
+button:hover{
+  transform: scale(1.05);
+}
+button:hover{
+  background-color: green;
+}
+
+.footer{
+margin-top: 15px;
+display: flex;
+margin-left: 427px;
+
+}
+a{
+text-decoration: none;
+
+}
+.first{
+height: 30px;
+
+}
+.firstp{
+margin-top: -34px;
+margin-left: 39px;
+color: black;
+font-size: 26px;
+color: #111;
+
+font-weight: 900;
+font-weight: bolder;
+}
+.firstp:hover{
+color: rgb(76, 79, 241);
+}
+.second{
+height: 30px;
+margin-left:90px;
+
+}
+.secondp{
+margin-top: -32px;
+margin-left: 158px;
+color: black;
+font-size: 26px;
+color: #111;
+
+font-weight: 900;
+font-weight: bolder;
+}
+.secondp:hover{
+color: rgb(76, 79, 241);
+}
+.third{
+height: 30px;
+margin-left:100px;
+
+}
+.thirdp{
+margin-top: -34px;
+margin-left: 138px;
+color: black;
+font-size: 26px;
+color: #111;
+
+font-weight: 900;
+font-weight: bolder;
+}
+.thirdp:hover{
+color: rgb(76, 79, 241);
+}
+.signup:hover{
+color: rgb(21, 18, 12);
+}

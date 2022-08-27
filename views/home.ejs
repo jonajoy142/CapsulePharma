@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome  <%= title %></p>
+    <% if(session.user_id) {%>
+
+      <h3>welcome <%= data %></h3>
+      <a href="/logout"> <button class="btn btn-primary">Logout</button></a>
+
+      <%}%>
+  </body>
+</html>

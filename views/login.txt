@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <title>Login - CAPSULE PHARMA</title>
+    <link rel="icon" href="/photos/capsule.png" type="image/icon type">
+</head>
+<body>
+    <div class="container">
+       <div class="banner">
+           <img src="/photos/capsule.png" alt="logo" class="logo1">
+           <h1 class="logo-name">CAPSULE<br>PHARMA</h1>
+           <ul>
+            <li><a href=""><img src="/photos/instagram.svg" alt="instagram" class="insta"></a></li>
+            <li><a href=""><img src="/photos/facebook.svg" alt="instagram" class="insta"></a></li>
+            <li><a href=""><img src="/photos/whatsapp.svg" alt="instagram" class="insta1"></a></li>
+           </ul>
+       </div>
+
+       <div class="formspace"></div>
+       
+          <div class="form1">
+            <h5  style=" margin-right: 300px; padding-left: 100px; padding-bottom: 10px; " ><%= error %></h5>
+            <form method="post" action="/login">
+               <label for="em"  class="em1">Email</label>
+               <br>
+               <input id="em" name="email" type="email" required placeholder="Email id">
+               <br><br>
+               <label>Password</label>
+               <br>
+               <input id="em" name="password" type="password" required placeholder="password">
+             
+            </div>
+               <a href="/login" class="bt-lg"> <button type="submit" class="bt-login">Login</button></a>
+            
+            </form> 
+          
+            <br>
+           <img src="/photos/capsule.png" alt="logo2" class="logo2">
+           <br>
+           
+           <p class="lastpara">Don't have any account? <a href="/signup" class="signup">Sign Up</a> </p>
+           <div class="footer">
+            <a href="login1.html"><img src="/photos/user-3297.svg" alt="signup" class="first"><h3 class="firstp">Login/Sign Up</h3></a>
+            <a href="about.html"><img src="/photos/about-us.svg" alt="signup" class="second"><h3 class="secondp">About</h3></a>
+            <a href="contactus.html"><img src="/photos/phone-call-svgrepo-com.svg" alt="signup" class="third"><h3 class="thirdp">Contact Us</h3></a>
+            </div>
+        </div>
+      
+    </div>
+    
+        
+   
+</body>
+</html>

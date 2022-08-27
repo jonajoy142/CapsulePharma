@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CAPSULE PHARMA</title>
+    <link rel="icon" href="/photos/capsule.png" type="image/icon type">
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="/photos/capsule.png" alt="logo" class="logo1">
+            <h1 class="logo-name">CAPSULE<br>PHARMA</h1>
+            <ul>
+                <li><a href=""><img src="/photos/instagram.svg" alt="instagram" class="insta"></a></li>
+                <li><a href=""><img src="/photos/facebook.svg" alt="instagram" class="insta"></a></li>
+                <li><a href=""><img src="/photos/whatsapp.svg" alt="instagram" class="insta1"></a></li>
+            </ul>
+        </div>
+        <div style="width:35%;background-color:white;border: solid;
+        background-color: white;
+        margin-left: 30rem;
+        border-radius: 7rem;
+       height: 555px;margin-top: px;"> 
+         <h5  style=" margin-right: 300px; padding-left: 100px; padding-bottom: 0px; " ><%= error %></h5>
+          <form action="/register" method="post">
+           
+         <label>Pharmacist Name</label>
+         <br>
+       <input  type="text" name="uname" placeholder="Enter the first name" style="margin-top:2px;"/> <br><br>
+
+       <label>Email</label>
+         <br>   
+       <input type="email" name="uemail"  placeholder="Enter the email id here........" style="margin-top:4px"/> <br><br>
+       <label>Mobile Number</label>
+         <br>   
+       <input type="text" name="umobile" placeholder="Enter the mobile num here........" style="margin-top:4px"/> <br><br>
+       <label>Password</label>
+         <br>   
+       <input type="password" name="password"  placeholder="................." style="margin-top:4px"/> <br><br>
+       <label>Confirm Password</label>
+         <br>   
+       <input type="password" name="cpassword" placeholder=".................."  style="margin-top: 4px"/> <br><br>
+       
+       <input type="submit" class="sign" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" value="sign up">
+      </form>
+       <p class="lastpara">Already have an Account?  <a href="/" class="signup">Sign In</a> </p>
+       
+    </div>
+    <div class="footer">
+      <a href="/"><img src="/photos/user-3297.svg" alt="signup" class="first"><h3 class="firstp">Login/Sign Up</h3></a>
+      <a href="about.html"><img src="/photos/about-us.svg" alt="signup" class="second"><h3 class="secondp">About</h3></a>
+      <a href="contactus.html"><img src="/photos/phone-call-svgrepo-com.svg" alt="signup" class="third"><h3 class="thirdp">Contact Us</h3></a>  
+    </div>
+    </div>
+</body>
+</html>
