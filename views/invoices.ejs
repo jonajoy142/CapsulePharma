@@ -26,7 +26,7 @@
          <div class="card1" style="font-weight: 500">
              <br>
              
-             <p class="time-font mb-0 ml-4 mt-auto" style="color:#c2c7d0"><img src="../asset/img/sun.png" style="height: 30px">&nbsp;08:30 <span class="sm-font">AM</span></p>
+             <p class="time-font mb-0 ml-4 mt-auto" id="current_time" style="color:#c2c7d0" ></p>
              <p class="ml-4 mb-4" id="current_date"  style="color:#c2c7d0">Wednesday, 18 October 2019</p>
              <script>
               //  document.getElementById("current_date").innerHTML = Date();
@@ -256,7 +256,7 @@
                         
                         
                   </table>
-               <button type="submit" class="btn btn-primary" style="background-image: linear-gradient(to bottom right, rgb(10, 23, 124), rgb(7, 9, 54));margin-left: 1100px; padding-bottom: 10px;"> <a href="/clearcart" style="color: white;font-weight:550;font-size:1.2rem"> Clear Cart </a></button>
+               <button type="submit" class="btn btn-primary" style="background-image: linear-gradient(to bottom right, rgb(10, 23, 124), rgb(7, 9, 54));margin-left: 1100px; padding-bottom: 10px;"> <a href="/clearcart" style="color: white;font-weight:550;font-size:1.2rem" onclick="return alert('Removing all items')"> Clear Cart </a></button>
                   <form action="/bill" method="post" style="margin-left: 10px; margin-top: -45px;">
                      <h3 >Grand Total:<h1 name="gtotal"  id="grandtotal" > </h1></h3>
                   </form>
@@ -353,6 +353,22 @@
    <script src="../asset/tables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
    <script src="../asset/tables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>s
    <script src="../asset/tables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+   <script>
+               
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+      const d = new Date();
+      var dd = String(d.getDate()).padStart(2, '0');
+      var mm = String(d.getMonth() + 1).padStart(2, '0');
+      var yyyy = d.getFullYear();
+      var fullDate = +dd +"-"+ monthNames[d.getMonth()] +"-"+ yyyy;
+      document.getElementById("current_date").innerHTML = fullDate;
+      
+      var today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      document.getElementById("current_time").innerHTML=time;
+
+
+</script>
    <!-- <script>
       $(function () {
          $("#example1").DataTable();

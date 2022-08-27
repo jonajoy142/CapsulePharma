@@ -2,10 +2,10 @@ const mysql=require('mysql2');
 
 var db=mysql.createConnection({
    
-    host:"localhost",
-    database:"capsulepharma",
-    user:"root",
-    password:"Jona@147",
+    host:"sql6.freesqldatabase.com",
+    database:"sql6515462",
+    user:"sql6515462",
+    password:"fjzMLy8DGe",
 
 });
 

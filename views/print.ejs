@@ -31,9 +31,11 @@
                
                 <div class="invoice-date">
                     <small style="font-size:medium ;">Invoice </small>
-                    <div class="date text-inverse m-t-5" id="date" onmouseenter="date()">August 3</div>
+                    <div class="date text-inverse m-t-5" id="current_date" >August 3
+                    <p class="time-font mb-0 ml-4 mt-auto" id="current_time" style="color:#c2c7d0" ></p></div>
                     <div class="invoice-detail">
                        Bill No: <%=billId%><br>
+                       Buyer Name:<b><%=name%></b>
                     
                     </div>
                 </div>
@@ -89,7 +91,7 @@
                          
                         </div>
                         <div class="invoice-price-right">
-                            <small style="font-size:20px ;" >TOTAL</small> <span class="f-w-600">Rs.<%=gtotal%></span>
+                            <small style="font-size:20px ;" >TOTAL</small> <span class="f-w-600"><b>Rs.<%=gtotal%></b></span>
                         </div>
                     </div>
                     <!-- end invoice-price -->
@@ -126,13 +128,18 @@
 </div>
 
 <script>
-    function date()
-    {
-    let date = new Date()
-    let day = date.getDate();
-    let month = date.getMonth()+1;
-    let year = date.getFullYear();
-    let fullDate = `${day}/${month}/${year}.`;
-    document.getElementById("date").innerHTML=fullDate;
-    }
+               
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+    const d = new Date();
+    var dd = String(d.getDate()).padStart(2, '0');
+    var mm = String(d.getMonth() + 1).padStart(2, '0');
+    var yyyy = d.getFullYear();
+    var fullDate = +dd +"-"+ monthNames[d.getMonth()] +"-"+ yyyy;
+    document.getElementById("current_date").innerHTML = fullDate;
+    
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    document.getElementById("current_time").innerHTML=time;
+
+
 </script>

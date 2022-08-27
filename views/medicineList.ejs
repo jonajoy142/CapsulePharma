@@ -26,7 +26,7 @@
          <div class="card1" style="font-weight: 500">
              <br>
              
-             <p class="time-font mb-0 ml-4 mt-auto" style="color:#c2c7d0"><img src="../asset/img/sun.png" style="height: 30px">&nbsp;08:30 <span class="sm-font">AM</span></p>
+             <p class="time-font mb-0 ml-4 mt-auto" id="current_time" style="color:#c2c7d0" ></p>
              <p class="ml-4 mb-4" id="current_date"  style="color:#c2c7d0">Wednesday, 18 October 2019</p>
              <script>
               //  document.getElementById("current_date").innerHTML = Date();
@@ -296,6 +296,22 @@
          $("#example1").DataTable();
       });
    </script>
+   <script>
+               
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+      const d = new Date();
+      var dd = String(d.getDate()).padStart(2, '0');
+      var mm = String(d.getMonth() + 1).padStart(2, '0');
+      var yyyy = d.getFullYear();
+      var fullDate = +dd +"-"+ monthNames[d.getMonth()] +"-"+ yyyy;
+      document.getElementById("current_date").innerHTML = fullDate;
+      
+      var today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      document.getElementById("current_time").innerHTML=time;
+
+
+</script>
 </body>
 
 </html>

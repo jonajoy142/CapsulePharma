@@ -81,10 +81,18 @@ router.post('/register', (req, res, next) => {
   console.log("eeeeeeee");
   uname = req.body.uname,
     umail = req.body.uemail;
-  mobile = req.body.umobile;
-  var user_type = "user";
-  password = req.body.password,
+    mobile = req.body.umobile;
+ 
+    password = req.body.password,
     confirm_password = req.body.cpassword
+
+
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+      const d = new Date();
+      var dd = String(d.getDate()).padStart(2, '0');
+      var mm = String(d.getMonth() + 1).padStart(2, '0');
+      var yyyy = d.getFullYear();
+      var fullDate = +dd +"-"+ monthNames[d.getMonth()] +"-"+ yyyy;
 
   if (confirm_password != password) {
     res.render('signup', { title: "Home page", error: "Password not Matching" })
@@ -96,7 +104,7 @@ router.post('/register', (req, res, next) => {
       if (error) throw error;
       password = hash;
       console.log(password);
-      var sql = "INSERT INTO admintable (user_name,user_email,user_password,user_mobile,user_type) VALUES ('" + uname + "','" + umail + "','" + password + "','" + mobile + "','" + user_type + "')";
+      var sql = "INSERT INTO admintable (user_name,user_email,user_password,user_mobile,date_of_join) VALUES ('" + uname + "','" + umail + "','" + password + "','" + mobile + "','" + fullDate + "')";
       db.query(sql, function (err, data) {
         if (err) throw err;
         res.render('signup', { title: "Home page", error: " Successfully Registered" });
@@ -144,7 +152,7 @@ router.get("/dashboard", (req, res) => {
           db.query(sql4,(error,data,next)=>{
             if (error) throw error;
             console.log(data[0].totalamt);
-            var rev=data[0].totalamt;
+            var rev=Math.round(data[0].totalamt);
 
             db.query(sql5,(error,data,next)=>{
               if (error) throw error;
@@ -346,7 +354,7 @@ router.post('/cartupdate/:id', (request, response, next) => {
   var sql = `UPDATE medcart SET 
            quantity="${iquantity}"
             WHERE m_id="${id}"`;
-  // var sql3 = `UPDATE medcart SET amount="${iquantity}" * (SELECT price WHERE m_id="${id}") WHERE m_id="${id}"`;
+  var sql3 = `update medcart set medcart.amount=medcart.quantity*medcart.price where m_id="${id}"`;
  
 
   // var sql2 = `UPDATE sample1 SET Stock = (SELECT Stock WHERE id ="${id}")-"${iquantity}" WHERE id="${id}"`;
@@ -357,15 +365,15 @@ router.post('/cartupdate/:id', (request, response, next) => {
     if (error)
       throw error;
     console.log("updated");
-    response.redirect('/invoice');
+    // response.redirect('/invoice');
    
 
-    // db.query(sql3, function (error, data) {
+    db.query(sql3, function (error, data) {
 
-    //   if (error)
-    //     throw error;
-    //   console.log("updated");
-    //   response.redirect('/invoice');
+      if (error)
+        throw error;
+      console.log("updated");
+      response.redirect('/invoice');
       
   
     //   // db.query(sql2, function (error, data) {
@@ -377,10 +385,10 @@ router.post('/cartupdate/:id', (request, response, next) => {
        
     
     
-    //   // });
+      // });
   
   
-    // });
+    });
 
 
   });
@@ -508,6 +516,7 @@ router.get('/print', (request, response, next) => {
   var sql = "select * from medcart ORDER BY medicine_name";
   var sql2 = "Select amount as count from invoices where purchase_date = (Select max(purchase_date) from invoices)";
   var sql3 = "Select b_id as b from invoices where purchase_date = (Select max(purchase_date) from invoices)";
+  var sql4 = "Select b_name as name from invoices where purchase_date = (Select max(purchase_date) from invoices)";
   
 
   db.query(sql2, (error, data) => {
@@ -525,7 +534,16 @@ router.get('/print', (request, response, next) => {
       db.query(sql3, (error, data) => {
         var s2 = data[0].b;
         if (error) throw error;
-        response.render('print', { title: "INVOICE", action: "cart", sampleData: data1, gtotal: s1 ,billId:s2});
+        // response.render('print', { title: "INVOICE", action: "cart", sampleData: data1, gtotal: s1 ,billId:s2});
+
+
+        db.query(sql4, (error, data) => {
+          var s3 = data[0].name;
+          if (error) throw error;
+          response.render('print', { title: "INVOICE", action: "cart", sampleData: data1, gtotal: s1 ,billId:s2,name:s3});
+    
+    
+        });
   
   
       });
