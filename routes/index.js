@@ -214,29 +214,14 @@ router.post('/addnew', (request, response) => {
   var purchase_date = request.body.purchase_date;
   var purchase_price = request.body.purchase_price;
   
-  
   var sql = "insert into medicines(medicine_name,medBatch,medExpDate,price,stock,purchase_price,purchase_date,refilled_date) values('" + mname + "','" + batch + "','" + expdate + "','" + sales_price + "','" + stock+ "','" + purchase_price + "','" + purchase_date + "','" + purchase_date + "');"
-  // var sql2 = "insert into med_purchase(Medicine_name,Batch_No,Quantity,price_per_unit,Purchase_Date,exp_date) values('" + mname + "','" + batch + "','" + stock+ "','" + purchase_price + "','" + purchase_date + "','" + expdate + "');"
-   
-  // db.query(sql, function (error, data) {
-
-  //   if (error)
-  //     throw error;
-  //   console.log("inserted")
-    // response.render('add-medicine', { title: 'Capsule Pharma',username: username, session: request.session, error: 'Inserted' });
-
     db.query(sql, function (error, data) {
 
       if (error)
         throw error;
       console.log("inserted")
       response.render('add-medicine', { title: 'Capsule Pharma',username: username, session: request.session, error: 'Inserted' });
-  
-  
-    });
-
-
-//   });
+  });
 });
 
 //DELETE

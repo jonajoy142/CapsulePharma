@@ -7,6 +7,12 @@ var db=mysql.createConnection({
     user:"sql6515462",
     password:"fjzMLy8DGe",
 
+
+    // host:"localhost",
+    // database:"capsulepharma",
+    // user:"root",
+    // password:"Jona@147",
+
 });
 
 db.connect((err)=>{
